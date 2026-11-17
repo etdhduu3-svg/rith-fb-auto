@@ -72,5 +72,42 @@ app.post("/api/admin/login", async (req, res) => {
 });
 
 app.listen(PORT, () => {
+function verifyAdmin(req, res, next) {
+  const authHeader = req.headers.authorization;
+
+  if (!authHeader || !authHeader.startsWith("Bearer ")) {
+    return res.status(401).json({
+      success: false,
+      message: "Unauthorized"
+    });
+  }
+
+  try {
+    const token = authHeader.split(" ")[1];
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
+    if (decoded.role !== "admin") {
+      return res.status(403).json({
+        success: false,
+        message: "Forbidden"
+      });
+    }
+
+    next();
+  } catch (error) {
+    return res.status(401).json({
+      success: false,
+      message: "Invalid or expired token"
+    });
+  }
+}
+
+app.get("/api/admin/verify", verifyAdmin, (req, res) => {
+  res.json({
+    success: true,
+    message: "Admin authenticated"
+  });
+});
+
   console.log(`RITH API running on port ${PORT}`);
 });
