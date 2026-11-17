@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RITH FB AUTO - Register</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f1f5f9;
+      padding: 20px;
+    }
+    .container {
+      max-width: 450px;
+      margin: 30px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+    }
+    h2 { color: #1877f2; text-align: center; }
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 13px;
+      margin: 9px 0;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+    button {
+      width: 100%;
+      padding: 14px;
+      background: #1877f2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    #result { margin-top: 15px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>RITH FB AUTO</h2>
+    <h3>Registration Assistant</h3>
+
+    <form id="registerForm">
+      <label>First name</label>
+      <input id="firstName" required>
+
+      <label>Last name</label>
+      <input id="lastName" required>
+
+      <label>Email (optional)</label>
+      <input id="email" type="email">
+
+      <label>Date of birth</label>
+      <input id="birthday" type="date" required>
+
+      <label>Registration checklist</label>
+      <p>
+        <input type="checkbox" id="consent" required>
+        I confirm these are my own details.
+      </p>
+
+      <button type="submit">Continue</button>
+    </form>
+
+    <div id="result"></div>
+    <p>
+      <a href="https://www.facebook.com/reg/"
+         target="_blank" rel="noopener">
+        Open Official Facebook Registration
+      </a>
+    </p>
+  </div>
+
+  <script>
+    document.getElementById("registerForm")
+      .addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        document.getElementById("result").textContent =
+          "Your registration information is ready. " +
+          "Continue on the official Facebook website.";
+      });
+  </script>
+</body>
+</html>
