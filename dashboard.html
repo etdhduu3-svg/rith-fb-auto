@@ -54,6 +54,14 @@ footer{text-align:center;margin-top:30px;color:#8493ad}
 
 <header>
 <h1>RITH ADMIN</h1>
+  <button onclick="logout()">LOGOUT</button>
+
+<script>
+function logout() {
+  sessionStorage.removeItem("rith_admin_token");
+  location.href = "login.html";
+}
+</script>
 <p>Management Dashboard</p>
 </header>
 
