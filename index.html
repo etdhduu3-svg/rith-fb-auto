@@ -4,65 +4,133 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RITH FB AUTO</title>
+<title>RITH FB AUTO PRO</title>
 <style>
+* { box-sizing: border-box; }
+
 body {
-  font-family: Arial;
-  background: #eef2ff;
   margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f1f5f9;
   color: #172554;
 }
+
 header {
-  background: #1877f2;
+  background: #102b55;
   color: white;
-  text-align: center;
-  padding: 30px 15px;
+  padding: 25px 20px 35px;
 }
+
+.brand {
+  color: #60a5fa;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.status {
+  background: #166534;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  float: right;
+  font-size: 12px;
+}
+
 main {
-  max-width: 550px;
-  margin: 30px auto;
+  max-width: 650px;
+  margin: 25px auto;
   padding: 15px;
 }
+
 .card {
   background: white;
+  border-radius: 16px;
   padding: 22px;
-  border-radius: 14px;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
+  box-shadow: 0 3px 12px #0000000d;
 }
+
+h2 { color: #1877f2; }
+
 button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
   background: #1877f2;
   color: white;
-  border: none;
-  padding: 14px;
-  width: 100%;
-  border-radius: 8px;
   font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button.secondary {
+  background: #e8f1ff;
+  color: #1877f2;
+}
+
+a { text-decoration: none; }
+
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #64748b;
+  font-size: 13px;
 }
 </style>
 </head>
+
 <body>
+
 <header>
-<h1>RITH FB AUTO</h1>
-<p>Registration Assistant</p>
+  <span class="status">ONLINE</span>
+  <div class="brand">RITH FB AUTO</div>
+  <p>CONTROL PANEL</p>
+  <h1>Welcome to RITH</h1>
+  <p>Facebook Registration Assistant</p>
 </header>
+
 <main>
-<div class="card">
-<h2>Welcome to RITH</h2>
-<p>Manage your registration preparation.</p>
-</div>
-<div class="card">
-<h3>Registration Assistant</h3>
-<a href="register.html">
-<button>Open Registration</button>
-</a>
-</div>
-<div class="card">
-<h3>Facebook Official</h3>
-<a href="https://www.facebook.com/reg/"
-target="_blank" rel="noopener">
-<button>Open Facebook</button>
-</a>
-</div>
+
+  <div class="card">
+    <h2>Dashboard</h2>
+    <p>Welcome to your registration assistant.</p>
+    <p>Manage your registration preparation
+    and account security.</p>
+  </div>
+
+  <div class="card">
+    <h3>Registration Assistant</h3>
+    <p>Prepare your personal registration details.</p>
+    <a href="register.html">
+      <button>Open Registration</button>
+    </a>
+  </div>
+
+  <div class="card">
+    <h3>Facebook Official</h3>
+    <p>Continue registration on the official website.</p>
+    <a href="https://www.facebook.com/reg/"
+       target="_blank" rel="noopener noreferrer">
+      <button>Open Facebook</button>
+    </a>
+  </div>
+
+  <div class="card">
+    <h3>Security Center</h3>
+    <p>Protect your account and personal information.</p>
+    <button class="secondary"
+      onclick="alert('Never share your password or OTP. Use official Facebook security settings.')">
+      View Security Tips
+    </button>
+  </div>
+
 </main>
+
+<footer>
+  RITH FB AUTO © 2026
+  <p>Registration Assistant</p>
+</footer>
+
 </body>
 </html>
