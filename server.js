@@ -1,6 +1,7 @@
 
 const express = require("express");
 const helmet = require("helmet");
+const cors = require("cors");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
@@ -8,6 +9,9 @@ require("dotenv").config();
 const app = express();
 
 app.use(helmet());
+app.use(cors({
+  origin: "https://etdhdduu3-svg.github.io"
+}));
 app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
