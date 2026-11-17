@@ -3,89 +3,61 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RITH FB AUTO Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RITH ADMIN DASHBOARD</title>
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #eef2ff;
-  color: #172554;
-}
-header {
-  background: #1877f2;
-  color: white;
-  padding: 25px;
-  text-align: center;
-}
-main {
-  max-width: 600px;
-  margin: 25px auto;
-  padding: 15px;
-}
-.card {
-  background: white;
-  padding: 20px;
-  border-radius: 15px;
-  margin-bottom: 15px;
-  box-shadow: 0 3px 12px #0001;
-}
-button {
-  width: 100%;
-  padding: 14px;
-  border: 0;
-  border-radius: 9px;
-  background: #1877f2;
-  color: white;
-  font-size: 16px;
-}
-a { text-decoration: none; }
-footer {
-  text-align: center;
-  padding: 20px;
-  color: #64748b;
-}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial;background:#0b1020;color:white;padding:20px}
+header{background:#151e35;padding:22px;border-radius:15px}
+h1{color:#38bdf8;margin:0}
+p{color:#aab8d0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:15px;margin-top:20px}
+.card{background:#151e35;padding:22px;border-radius:15px;border:1px solid #263653}
+.card h3{color:#38bdf8}
+.number{font-size:30px;font-weight:bold}
+button{background:#0284c7;color:white;border:0;padding:12px 18px;border-radius:8px;cursor:pointer}
+footer{text-align:center;margin-top:30px;color:#8493ad}
 </style>
 </head>
 <body>
-
 <header>
-  <h1>RITH FB AUTO</h1>
-  <p>Registration Assistant Dashboard</p>
+<h1>RITH ADMIN</h1>
+<p>Management Dashboard</p>
 </header>
 
-<main>
-  <div class="card">
-    <h2>Welcome to RITH</h2>
-    <p>Your Facebook Registration Assistant.</p>
-  </div>
+<div class="grid">
+<div class="card">
+<h3>Total Users</h3>
+<div class="number">0</div>
+<p>Registered users</p>
+</div>
 
-  <div class="card">
-    <h3>Registration Assistant</h3>
-    <p>Prepare your registration information.</p>
-    <a href="register.html">
-      <button>Open Registration Assistant</button>
-    </a>
-  </div>
+<div class="card">
+<h3>Pending</h3>
+<div class="number">0</div>
+<p>Waiting for review</p>
+</div>
 
-  <div class="card">
-    <h3>Official Facebook</h3>
-    <p>Continue registration on Facebook.</p>
-    <a href="https://www.facebook.com/reg/"
-       target="_blank" rel="noopener">
-      <button>Open Facebook</button>
-    </a>
-  </div>
+<div class="card">
+<h3>Completed</h3>
+<div class="number">0</div>
+<p>Completed registrations</p>
+</div>
 
-  <div class="card">
-    <h3>Account Security</h3>
-    <p>Never share your password or verification code.</p>
-  </div>
-</main>
+<div class="card">
+<h3>System Status</h3>
+<div class="number">ONLINE</div>
+<p>Dashboard is running</p>
+</div>
+</div>
 
-<footer>
-  RITH FB AUTO © 2026
-</footer>
+<div class="card" style="margin-top:20px">
+<h3>Admin Information</h3>
+<p>Welcome to RITH Admin Dashboard.</p>
+<p>This is a demonstration dashboard. User data is not stored yet.</p>
+<button onclick="alert('RITH Dashboard is running!')">Test System</button>
+</div>
 
+<footer>© 2026 RITH SYSTEM</footer>
 </body>
 </html>
