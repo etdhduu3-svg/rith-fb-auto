@@ -3,172 +3,80 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RITH FB AUTO PRO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RITH SMM PANEL</title>
 <style>
-* { box-sizing: border-box; }
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f1f5f9;
-  color: #172554;
-}
-
-header {
-  background: #102b55;
-  color: white;
-  padding: 25px 20px 35px;
-}
-
-.brand {
-  color: #60a5fa;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.status {
-  background: #166534;
-  color: white;
-  padding: 6px 12px;
-  border-radius: 20px;
-  float: right;
-  font-size: 12px;
-}
-
-<div class="card">
-  <h3>Privacy Protection</h3>
-
-  <p>
-    RITH FB AUTO respects your privacy.
-  </p>
-
-  <p>
-    This website does not collect or store
-    your Facebook password or OTP.
-  </p>
-
-  <p>
-    Do not share sensitive personal
-    information with anyone.
-  </p>
-
-  <a href="https://www.facebook.com/privacy/center/"
-     target="_blank"
-     rel="noopener noreferrer">
-    <button>View Privacy Information</button>
-  </a>
-</div>
-
-<div class="card">
-  <h3>Privacy Protection</h3>
-  <p>RITH FB AUTO respects your privacy.</p>
-  <p>This website does not collect or store your Facebook password or OTP.</p>
-  <p>Do not share sensitive personal information with anyone.</p>
-  <a href="https://www.facebook.com/privacy/center/"
-     target="_blank"
-     rel="noopener noreferrer">
-    <button>View Privacy Information</button>
-  </a>
-</div>
-
-main {
-  max-width: 650px;
-  margin: 25px auto;
-  padding: 15px;
-}
-
-.card {
-  background: white;
-  border-radius: 16px;
-  padding: 22px;
-  margin-bottom: 16px;
-  box-shadow: 0 3px 12px #0000000d;
-}
-
-h2 { color: #1877f2; }
-
-button {
-  width: 100%;
-  padding: 15px;
-  border: none;
-  border-radius: 10px;
-  background: #1877f2;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-button.secondary {
-  background: #e8f1ff;
-  color: #1877f2;
-}
-
-a { text-decoration: none; }
-
-footer {
-  text-align: center;
-  padding: 25px;
-  color: #64748b;
-  font-size: 13px;
-}
+*{box-sizing:border-box}
+body{margin:0;background:#0b1120;color:white;font-family:Arial,sans-serif}
+header{padding:22px;background:#111c30;border-bottom:1px solid #26354c}
+.logo{font-size:25px;font-weight:bold;color:#60a5fa}
+.logo span{color:white}
+main{max-width:480px;margin:35px auto;padding:18px}
+.card{background:#142137;padding:25px;border-radius:15px;border:1px solid #26354c}
+h2{margin-top:0}
+p{color:#9caec5;line-height:1.6}
+input{width:100%;padding:14px;margin:9px 0;background:#0b1425;color:white;border:1px solid #34445e;border-radius:8px}
+button{width:100%;padding:14px;border:0;border-radius:8px;background:#2563eb;color:white;font-size:16px;font-weight:bold;margin-top:12px}
+button:hover{background:#1d4ed8}
+a{color:#60a5fa;cursor:pointer}
+.small{text-align:center;font-size:14px;margin-top:20px}
+.hidden{display:none}
 </style>
 </head>
-
 <body>
-
 <header>
-  <span class="status">ONLINE</span>
-  <div class="brand">RITH FB AUTO</div>
-  <p>CONTROL PANEL</p>
-  <h1>Welcome to RITH</h1>
-  <p>Facebook Registration Assistant</p>
+<div class="logo">RITH <span>SMM</span></div>
 </header>
-
 <main>
+<div class="card" id="login">
+<h2>Welcome to RITH SMM</h2>
+<p>Login to your SMM account</p>
+<input id="username" placeholder="Username">
+<input id="password" type="password" placeholder="Password">
+<button onclick="loginUser()">Sign In</button>
+<p class="small">Don't have an account? <a onclick="showRegister()">Sign Up</a></p>
+</div>
 
-  <div class="card">
-    <h2>Dashboard</h2>
-    <p>Welcome to your registration assistant.</p>
-    <p>Manage your registration preparation
-    and account security.</p>
-  </div>
+<div class="card hidden" id="register">
+<h2>Create Account</h2>
+<input id="newuser" placeholder="Username">
+<input id="newpass" type="password" placeholder="Password">
+<button onclick="registerUser()">Create Account</button>
+<p class="small"><a onclick="showLogin()">Back to Login</a></p>
+</div>
 
-  <div class="card">
-    <h3>Registration Assistant</h3>
-    <p>Prepare your personal registration details.</p>
-    <a href="register.html">
-      <button>Open Registration</button>
-    </a>
-  </div>
-
-  <div class="card">
-    <h3>Facebook Official</h3>
-    <p>Continue registration on the official website.</p>
-    <a href="https://www.facebook.com/reg/"
-       target="_blank" rel="noopener noreferrer">
-      <button>Open Facebook</button>
-    </a>
-  </div>
-
-  <div class="card">
-    <h3>Security Center</h3>
-    <p>Protect your account and personal information.</p>
-    <button class="secondary"
-      
-onclick="alert('RITH SECURITY CENTER\n\n1. Never share your password.\n2. Never share your OTP.\n3. Enable Two-Factor Authentication.\n4. Avoid suspicious links.\n5. Use official Facebook security settings.')"
-
-      View Security Tips
-    </button>
-  </div>
-
+<div class="card hidden" id="dashboard">
+<h2>RITH Dashboard</h2>
+<p>Welcome to RITH SMM Panel!</p>
+<h3>Balance: $0.00</h3>
+<button onclick="alert('SMM services will be connected soon!')">New Order</button>
+<button onclick="alert('Deposit system coming soon!')">Add Funds</button>
+<button onclick="alert('Order history coming soon!')">Order History</button>
+<button onclick="logout()">Logout</button>
+</div>
 </main>
-
-<footer>
-  RITH FB AUTO © 2026
-  <p>Registration Assistant</p>
-</footer>
-
+<script>
+function showRegister(){
+login.classList.add('hidden');
+register.classList.remove('hidden');
+}
+function showLogin(){
+register.classList.add('hidden');
+login.classList.remove('hidden');
+}
+function registerUser(){
+let u=document.getElementById('newuser').value;
+let p=document.getElementById('newpass').value;
+if(!u||!p){alert('Please fill all fields');return}
+alert('Demo only. Registration needs a secure server.');
+}
+function loginUser(){
+alert('Login requires a secure server. Do not use real passwords yet.');
+}
+function logout(){
+dashboard.classList.add('hidden');
+login.classList.remove('hidden');
+}
+</script>
 </body>
 </html>
